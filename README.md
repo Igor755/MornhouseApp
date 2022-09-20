@@ -1,3 +1,6 @@
+![image](https://user-images.githubusercontent.com/25371495/191271687-4c48e8a6-86de-4f58-9c3e-4261316b83a9.png)
+
+
 # Android Clean Architecture Template
 
 This project means to be base for realization of clean architecture (CA) project with mvvm and di
