@@ -1,2 +1,2 @@
 include ':presentation', ':data', ':di', ':domain'
-rootProject.name='CleatArchitecture'
+rootProject.name='MornhouseApp'

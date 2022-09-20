@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">MornhouseApp</string>
+    <string name="text_fact">TextFact</string>
+    <string name="get_fact_random">Get random fact</string>
+    <string name="get_fact">Get fact</string>
 </resources>

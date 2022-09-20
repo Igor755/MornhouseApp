@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.test.mornhouse.viemodel.FactNumberViewModel" />
+    </data>
+
+
+<LinearLayout
+    android:id="@+id/ll_fragment_get_fact"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_get_number_fragment_get_fact"
+        android:onTextChanged="@{viewmodel::textChanged}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="4"
+        android:text="@{viewmodel.number}"
+        android:inputType="number"
+        android:layout_marginStart="@dimen/offset_x6"
+        android:layout_marginEnd="@dimen/offset_x6"
+        android:hint="Enter your number here"
+        android:padding="@dimen/offset_x4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:enabled="false"
+        android:id="@+id/btn_get_fact_fragment_get_fact"
+        android:onClick="@{() -> viewmodel.getFactWithNumber()}"
+        style="@style/SignUpOrangeButton"
+        android:layout_marginTop="@dimen/offset_x4"
+        android:layout_marginStart="@dimen/offset_x6"
+        android:layout_marginEnd="@dimen/offset_x6"
+        android:padding="@dimen/offset_x4"
+        android:text="@string/get_fact"/>
+
+    <Button
+        android:onClick="@{() -> viewmodel.getFactRandomNumber()}"
+        android:id="@+id/btn_get_random_fact_fragment_get_fact"
+        style="@style/SignUpOrangeButton"
+        android:layout_marginTop="@dimen/offset_x4"
+        android:layout_marginStart="@dimen/offset_x6"
+        android:layout_marginEnd="@dimen/offset_x6"
+        android:padding="@dimen/offset_x4"
+        android:text="@string/get_fact_random"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginStart="@dimen/offset_x6"
+        android:layout_marginEnd="@dimen/offset_x6"
+        android:id="@+id/rv_facts_fragment_get_fact"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/offset_x4"
+        android:layout_marginBottom="@dimen/offset_x4"
+        tools:listitem="@layout/item_fact" />
+
+</LinearLayout>
+</layout>

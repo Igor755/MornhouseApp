@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_text_fact_item_fact"
+        android:textSize="@dimen/headline_16"
+        android:padding="@dimen/offset_x4"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_fact"/>
+
+</LinearLayout>
